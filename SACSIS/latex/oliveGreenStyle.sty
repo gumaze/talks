@@ -1,0 +1,70 @@
+%==============================================================================
+% INFORMAÇÕES PARA A PÁGINA DE TÍTULOS
+%------------------------------------------------------------------------------
+% Pacotes auxiliares
+\usepackage{pgf}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage{graphpap}
+\usepackage{graphics}
+%------------------------------------------------------------------------------
+% Pacotes da American Mathematical Society
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
+%------------------------------------------------------------------------------
+
+%==============================================================================
+% CONFIGURAÇÕES DE ESTILO DA APRESENTAÇÃO
+%------------------------------------------------------------------------------
+\usetheme{Copenhagen}
+\usecolortheme[named=OliveGreen]{structure} 
+%------------------------------------------------------------------------------
+\useoutertheme{infolines}
+\useoutertheme{split}
+\useinnertheme{rectangles}
+%------------------------------------------------------------------------------
+%Definição do esquema de cores
+\usecolortheme[named=OliveGreen]{structure}
+%------------------------------------------------------------------------------
+%Changing the itemization markers
+\setbeamertemplate{items}[rectangles] 
+%------------------------------------------------------------------------------
+%Rounded boxes and shadows
+%\setbeamertemplate{blocks}[rounded][shadow=true] 
+%------------------------------------------------------------------------------
+%Retirando os ícones de navegação
+\setbeamertemplate{navigation symbols}{} 
+%------------------------------------------------------------------------------
+%Retirando o rodapé
+\setbeamertemplate{footline}{}
+
+%==============================================================================
+% Definição de um novo estilo para os teoremas, definições, etc.
+\newtheoremstyle%
+	{probfut}%			nome
+	{\baselineskip}%	espaço acima
+	{\baselineskip}%	espaço abaixo
+	{\itshape}%			fonte do corpo
+	{}%					identanção
+	{}%					fonte do cabeçalho
+	{}%					pontuação do cabeçalho
+	{\newline}%			espaço do cabeçalho
+	{}%					customização do cabeçalho
+%------------------------------------------------------------------------------
+% Colocando o novo estilo ativo
+\theoremstyle{probfut}
+%------------------------------------------------------------------------------
+% Definição dos ambientes que usarão o novo estilo.
+\newtheorem{definicao}{Defini\c c\~ao}
+\newtheorem{teorema}{Teorema}
+\newtheorem{lema}{Lema}
+\newtheorem{proposicao}{Proposi\c c\~ao}
+\newtheorem{exemplo}{Exemplo}
+%------------------------------------------------------------------------------
+
+%==============================================================================
+
+\mode<presentation>
+{
+	\setbeamertemplate{theorem}[ams style]
+	\setbeamertemplate{theorems}[numbered]
+}

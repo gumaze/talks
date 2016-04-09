@@ -1,4 +1,4 @@
 def percentage(number):
-    return '{:.2f}%'.format(100 * number)
+    return '{:.2%}'.format(number)
 
 
